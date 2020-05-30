@@ -1,35 +1,28 @@
 @import "../variables";
+@import "../mixins";
 
 /* BUTTONS */
 .cs-striped.btn-primary {
-    background: repeating-linear-gradient(45deg, $primary, $primary 7px, darken($primary, 5%) 7px, darken($primary, 5%) 10px);
+    @include setBgColorAndHoverStriped($primary);
 }
 .cs-striped.btn-secondary {
-    background: repeating-linear-gradient(45deg, $secondary, $secondary 7px, darken($secondary, 5%) 7px, darken($secondary, 5%) 10px);
+    @include setBgColorAndHoverStriped($secondary);
 }
 .cs-striped.btn-success {
-    background: repeating-linear-gradient(45deg, $green, $green 7px, darken($green, 5%) 7px, darken($green, 5%) 10px);
+    @include setBgColorAndHoverStriped($green);
 }
 .cs-striped.btn-danger {
-    background: repeating-linear-gradient(45deg, $red, $red 7px, darken($red, 5%) 7px, darken($red, 5%) 10px);
+    @include setBgColorAndHoverStriped($red);
 }
 .cs-striped.btn-warning {
-    background: repeating-linear-gradient(45deg, $yellow, $yellow 7px, darken($yellow, 5%) 7px, darken($yellow, 5%) 10px);
+    @include setBgColorAndHoverStriped($yellow);
 }
 .cs-striped.btn-info {
-    background: repeating-linear-gradient(45deg, $pink, $pink 7px, darken($pink, 5%) 7px, darken($pink, 5%) 10px);
+    @include setBgColorAndHoverStriped($pink);
 }
 .cs-striped.btn-dark {
-    background: repeating-linear-gradient(45deg, $dark, $dark 7px, darken($dark, 5%) 7px, darken($dark, 5%) 10px);
+    @include setBgColorAndHoverStriped($dark);
 }
 .cs-striped.btn-light {
-    background: repeating-linear-gradient(45deg, white, white 7px, darken(white, 5%) 7px, darken(white, 5%) 10px);
-}
-.cs-striped.btn-link {
-    background: repeating-linear-gradient(45deg, transparent, transparent 7px, darken($cyan, 5%) 7px, darken($cyan, 5%) 10px);
-    border: none !important;
-}
-
-.btn:disabled{
-    text-decoration: line-through;
+    @include setBgColorAndHoverStriped(white);
 }

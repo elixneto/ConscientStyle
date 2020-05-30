@@ -10,6 +10,9 @@ $theme-colors: (
     "info": $pink,
 );
 @import "node_modules/bootstrap/scss/bootstrap";
+*:disabled {
+    cursor: not-allowed !important;
+}
 
 /* Fonts */
 @font-face {

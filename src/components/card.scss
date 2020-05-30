@@ -9,14 +9,13 @@
     align-items: center;
 }
 
-/* *************************************** */
 /* CARD STATUS */
 .cs-card-status {
     position: relative;
     height: 180px;
 }
 
-/* Back */
+/***** Back */
 .cs-card-status > .cs-card:nth-child(1) {
     position: absolute;
     width: -webkit-fill-available;
@@ -30,7 +29,7 @@
     }
 }
 
-/* Front */
+/***** Front */
 .cs-card-status > .cs-card:nth-child(2) {
     position: absolute;
     background-color: $grey;

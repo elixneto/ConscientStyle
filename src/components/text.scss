@@ -18,17 +18,18 @@
 .cs-text-72 {font-size: 72px;}
 
 /* COLORS */
-.cs-text-green {color: $green !important;}
-.cs-text-purple {color: $purple !important;}
 .cs-text-cyan {color: $cyan !important;}
+.cs-text-pink {color: $pink !important;}
+.cs-text-purple {color: $purple !important;}
+.cs-text-violet {color: $violet !important;}
+.cs-text-green {color: $green !important;}
 .cs-text-yellow {color: $yellow !important;}
 .cs-text-orange {color: $orange !important;}
 .cs-text-red {color: $red !important;}
-.cs-text-pink {color: $pink !important;}
 .cs-text-grey {color: $grey !important;}
 .cs-text-light-grey {color: $light-grey !important;}
 .cs-text-rainbow {
-    background-image: linear-gradient(to left, violet, $purple, $cyan, $green, $yellow, $orange, $red) !important;
+    background-image: linear-gradient(to left, $violet, $purple, $cyan, $green, $yellow, $orange, $red) !important;
     -webkit-background-clip: text;
     color: transparent !important;
 }
