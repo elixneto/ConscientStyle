@@ -7,7 +7,7 @@ $theme-colors: (
     "success": $green,
     "red": $red,
     "yellow": $yellow,
-    "info": $pink
+    "info": $pink,
 );
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -17,8 +17,8 @@ $theme-colors: (
     src: url("./fonts/Montserrat-Light.ttf");
 }
 
-html{
-    font-family: 'Montserrat Light' !important;
+html {
+    font-family: "Montserrat Light" !important;
     background-color: #2a2a2a !important;
     color: white !important;
     font-size: 16px;
@@ -28,4 +28,24 @@ html{
 body {
     background-color: transparent !important;
     color: white !important;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: lighten($grey, 5%);
 }
