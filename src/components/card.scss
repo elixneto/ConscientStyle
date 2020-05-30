@@ -1,8 +1,12 @@
+@import "../variables";
+
 .cs-card {
     border-radius: 5px;
     padding-top: 5px;
     padding-left: 8px;
     padding-right: 8px;
+    display: flexbox;
+    align-items: center;
 }
 
 /* *************************************** */
@@ -29,6 +33,8 @@
 /* Front */
 .cs-card-status > .cs-card:nth-child(2) {
     position: absolute;
+    background-color: $grey;
+    padding-top: 18px;
     width: -webkit-fill-available;
     margin-top: 30px;
     margin-left: 8px;

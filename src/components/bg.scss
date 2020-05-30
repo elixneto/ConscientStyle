@@ -1,0 +1,6 @@
+@import "../variables";
+
+.cs-bg-cyan {
+    background-color: $cyan !important;
+    border-color: darken($cyan, 5%) !important;
+}
