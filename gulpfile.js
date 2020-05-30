@@ -5,7 +5,7 @@ const concat = require('gulp-concat');
 const minifyCss = require('gulp-minify-css');
 
 exports.build = function () {
-    return gulp.src('src/components/*.scss')
+    return gulp.src('src/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(concat("conscientstyle.min.css"))
         .pipe(minifyCss())

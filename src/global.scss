@@ -1,0 +1,21 @@
+/* Bootstrap 4 */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* Fonts */
+@font-face {
+    font-family: "Montserrat Light";
+    src: url("./fonts/Montserrat-Light.ttf");
+}
+
+html{
+    font-family: 'Montserrat Light' !important;
+    background-color: #2a2a2a !important;
+    color: white !important;
+    font-size: 16px;
+    border-top: 4px solid $cyan;
+}
+
+body {
+    background-color: transparent !important;
+    color: white !important;
+}
