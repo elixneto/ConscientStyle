@@ -1,0 +1,12 @@
+@import "../variables";
+
+.outline-inverse.btn-outline-primary {
+    border-color: white !important;
+    color: white !important;
+
+    &:hover {
+        background-color: white !important;
+        border-color: white !important;
+        color: $primary !important;
+    }
+}

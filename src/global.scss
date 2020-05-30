@@ -1,4 +1,9 @@
+@import "./variables";
+
 /* Bootstrap 4 */
+$theme-colors: (
+    "primary": $primary
+);
 @import "node_modules/bootstrap/scss/bootstrap";
 
 /* Fonts */
