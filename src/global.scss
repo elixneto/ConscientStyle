@@ -2,7 +2,11 @@
 
 /* Bootstrap 4 */
 $theme-colors: (
-    "primary": $primary
+    "primary": $primary,
+    "success": $green,
+    "red": $red,
+    "yellow": $yellow,
+    "info": $pink
 );
 @import "node_modules/bootstrap/scss/bootstrap";
 
