@@ -1,4 +1,4 @@
-@mixin setBgColorAndHoverStriped($colorBase) {
+@mixin setBgColorStriped($colorBase) {
     background: repeating-linear-gradient(
         45deg,
         $colorBase,
@@ -6,6 +6,10 @@
         darken($colorBase, 5%) 4px,
         darken($colorBase, 5%) 7px
     );
+}
+
+@mixin setBgColorAndHoverStriped($colorBase) {
+    @include setBgColorStriped($colorBase);
     &:hover {
         background: repeating-linear-gradient(
             45deg,

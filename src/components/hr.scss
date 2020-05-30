@@ -1,0 +1,20 @@
+@import "../variables";
+
+@each $name, $value in $colors {
+    .cs-hr-#{$name} {
+        border-color: $value !important;
+    }
+}
+.cs-hr-rainbow {
+    border: linear-gradient(
+        to left,
+        map-get($colors, "violet"),
+        map-get($colors,"purple"),
+        map-get($colors,"cyan"),
+        map-get($colors,"green"),
+        map-get($colors,"yellow"),
+        map-get($colors,"orange"),
+        map-get($colors,"red")
+    ) !important;
+    color: transparent !important;
+}
