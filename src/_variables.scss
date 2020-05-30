@@ -1,15 +1,18 @@
-$cyan: #00a9d3;
-$pink: #ff0075;
-$purple: #9500da;
-$violet: #f83ef8;
-$green: #00d146;
-$yellow: #ffeb00;
-$orange: #ff5100;
-$red: #f72a1b;
-$grey: #444444;
-$light-grey: #6C757D;
-$dark-grey: #343a40;
+$colors: (
+    "cyan": #00a9d3,
+    "pink": #ff0075,
+    "purple": #9500da,
+    "violet": #f83ef8,
+    "green": #00d146,
+    "yellow": #ffeb00,
+    "orange": #ff5100,
+    "red": #f72a1b,
+    "grey": #444444,
+    "light-grey": #6c757d,
+    "dark-grey": #343a40,
+    "background": #2a2a2a
+);
 
-$primary: $cyan;
-$secondary: $light-grey;
-$dark: $dark-grey;
+$primary: map-get($colors, "cyan");
+$secondary: map-get($colors, "light-grey");
+$dark: map-get($colors, "dark-grey");

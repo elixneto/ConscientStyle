@@ -32,7 +32,7 @@
 /***** Front */
 .cs-card-status > .cs-card:nth-child(2) {
     position: absolute;
-    background-color: $grey;
+    background-color: map-get($colors, "grey");
     padding-top: 18px;
     width: -webkit-fill-available;
     margin-top: 30px;

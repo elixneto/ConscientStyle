@@ -9,16 +9,16 @@
     @include setBgColorAndHoverStriped($secondary);
 }
 .cs-striped.btn-success {
-    @include setBgColorAndHoverStriped($green);
+    @include setBgColorAndHoverStriped(map-get($colors, "green"));
 }
 .cs-striped.btn-danger {
-    @include setBgColorAndHoverStriped($red);
+    @include setBgColorAndHoverStriped(map-get($colors, "red"));
 }
 .cs-striped.btn-warning {
-    @include setBgColorAndHoverStriped($yellow);
+    @include setBgColorAndHoverStriped(map-get($colors, "yellow"));
 }
 .cs-striped.btn-info {
-    @include setBgColorAndHoverStriped($pink);
+    @include setBgColorAndHoverStriped(map-get($colors, "pink"));
 }
 .cs-striped.btn-dark {
     @include setBgColorAndHoverStriped($dark);

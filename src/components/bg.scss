@@ -1,6 +1,8 @@
 @import "../variables";
 
-.cs-bg-cyan {
-    background-color: $cyan !important;
-    border-color: darken($cyan, 5%) !important;
+@each $name, $value in $colors {
+    .cs-bg-#{$name} {
+        background-color: $value !important;
+        border-color: darken($value, 5%) !important;
+    }   
 }

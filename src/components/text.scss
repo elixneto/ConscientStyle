@@ -1,35 +1,69 @@
 @import "../variables";
 
 /* SIZES */
-.cs-text-10 {font-size: 10px;}
-.cs-text-12 {font-size: 12px;}
-.cs-text-14 {font-size: 14px;}
-.cs-text-16 {font-size: 16px;}
-.cs-text-18 {font-size: 18px;}
-.cs-text-20 {font-size: 20px;}
-.cs-text-22 {font-size: 22px;}
-.cs-text-24 {font-size: 24px;}
-.cs-text-26 {font-size: 26px;}
-.cs-text-30 {font-size: 30px;}
-.cs-text-36 {font-size: 36px;}
-.cs-text-42 {font-size: 42px;}
-.cs-text-50 {font-size: 50px;}
-.cs-text-60 {font-size: 60px;}
-.cs-text-72 {font-size: 72px;}
+.cs-text-10 {
+    font-size: 10px;
+}
+.cs-text-12 {
+    font-size: 12px;
+}
+.cs-text-14 {
+    font-size: 14px;
+}
+.cs-text-16 {
+    font-size: 16px;
+}
+.cs-text-18 {
+    font-size: 18px;
+}
+.cs-text-20 {
+    font-size: 20px;
+}
+.cs-text-22 {
+    font-size: 22px;
+}
+.cs-text-24 {
+    font-size: 24px;
+}
+.cs-text-26 {
+    font-size: 26px;
+}
+.cs-text-30 {
+    font-size: 30px;
+}
+.cs-text-36 {
+    font-size: 36px;
+}
+.cs-text-42 {
+    font-size: 42px;
+}
+.cs-text-50 {
+    font-size: 50px;
+}
+.cs-text-60 {
+    font-size: 60px;
+}
+.cs-text-72 {
+    font-size: 72px;
+}
 
 /* COLORS */
-.cs-text-cyan {color: $cyan !important;}
-.cs-text-pink {color: $pink !important;}
-.cs-text-purple {color: $purple !important;}
-.cs-text-violet {color: $violet !important;}
-.cs-text-green {color: $green !important;}
-.cs-text-yellow {color: $yellow !important;}
-.cs-text-orange {color: $orange !important;}
-.cs-text-red {color: $red !important;}
-.cs-text-grey {color: $grey !important;}
-.cs-text-light-grey {color: $light-grey !important;}
+@each $name, $value in $colors {
+    .cs-text-#{$name} {
+        color: $value !important;
+    }
+}
 .cs-text-rainbow {
-    background-image: linear-gradient(to left, $violet, $purple, $cyan, $green, $yellow, $orange, $red) !important;
+    background-image: linear-gradient(
+        to left,
+        map-get($colors, "violet"),
+        map-get($colors,"purple"),
+        map-get($colors,"cyan"),
+        map-get($colors,"green"),
+        map-get($colors,"yellow"),
+        map-get($colors,"orange"),
+        map-get($colors,"red")
+    ) !important;
     -webkit-background-clip: text;
     color: transparent !important;
 }
