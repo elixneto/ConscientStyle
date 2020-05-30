@@ -1,0 +1,8 @@
+@import "../variables";
+@import "../mixins";
+
+@each $name, $value in $colors {
+    .cs-table-row-#{$name} {
+        background-color: $value !important;
+    }
+}

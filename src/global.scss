@@ -13,6 +13,17 @@ $theme-colors: (
 *:disabled {
     cursor: not-allowed !important;
 }
+.table {
+    color: white !important;
+}
+.table-striped > tbody > tr:nth-child(odd) {
+    background-color: map-get($colors, "dark-grey");
+}
+.table-hover > tbody > tr {
+    &:hover {
+        color: darken(white, 32%) !important;
+    }
+}
 
 /* Fonts */
 @font-face {
