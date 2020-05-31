@@ -21,7 +21,7 @@ $theme-colors: (
 }
 .table-hover > tbody > tr {
     &:hover {
-        color: darken(white, 32%) !important;
+        color: darken(white, 10%) !important;
     }
 }
 
@@ -42,6 +42,7 @@ html {
 body {
     background-color: transparent !important;
     color: white !important;
+    padding-bottom: 12px;
 }
 
 ::-webkit-scrollbar {

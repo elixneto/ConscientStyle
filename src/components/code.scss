@@ -1,0 +1,12 @@
+@import "../variables";
+
+.cs-code {
+    margin-top: 8px;
+    padding: 5px;
+    border: 1.5px dashed map-get($colors, "pink");
+}
+
+.cs-code > p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
