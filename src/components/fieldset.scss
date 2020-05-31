@@ -1,11 +1,14 @@
 @import "../variables";
 
 .cs-fieldset {
-    border: 1.5px solid;
     border-radius: 3px;
     padding: 8px;
     margin-top: 8px;
     margin-bottom: 8px;
+    border: 1.5px solid;
+}
+.cs-fieldset-no-border {
+    border: none;
 }
 
 @each $name, $value in $colors {
