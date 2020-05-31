@@ -36,7 +36,7 @@ html {
     background-color: map-get($colors, "background") !important;
     color: white !important;
     font-size: 16px;
-    border-top: 4px solid $primary;
+    border-right: 2px solid $primary;
 }
 
 body {
@@ -48,18 +48,19 @@ body {
     width: 12px;
 }
 ::-webkit-scrollbar-track {
-    background-color: #eaeaea;
-    border-left: 1px solid #fff;
+    background-color: white;
+    border-left: 1px solid map-get($colors, "light-grey");
 }
 ::-webkit-scrollbar-thumb {
-    background-color: map-get($colors, "grey");
+    background-color: map-get($colors, "dark-grey");
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    border-radius: 2px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: lighten(map-get($colors, "grey"), 5%);
+    border-radius: 3px;
+
+    &:hover {
+        background-color: map-get($colors, "grey");
+    }
 }
