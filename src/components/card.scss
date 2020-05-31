@@ -20,12 +20,12 @@
     position: absolute;
     width: -webkit-fill-available;
     margin-right: 10px;
-    z-index: 1000;
+    z-index: #{$default-z-index + 1};
 
     height: 138px;
 
     &:hover {
-        z-index: 1001;
+        z-index: #{$default-z-index + 2};
     }
 }
 
@@ -37,11 +37,11 @@
     width: -webkit-fill-available;
     margin-top: 30px;
     margin-left: 8px;
-    z-index: 1000;
+    z-index: #{$default-z-index + 1};
 
     height: 120px;
 
     &:hover {
-        z-index: 999;
+        z-index: $default-z-index;
     }
 }

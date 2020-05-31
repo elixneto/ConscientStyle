@@ -1,0 +1,47 @@
+@import "../variables";
+
+.cs-fieldset > legend {
+    position: relative;
+    margin-left: 12px;
+    padding-left: 8px;
+    padding-right: 16px;
+    width: auto !important;
+    max-width: auto !important;
+    border-radius: 3px;
+}
+
+.cs-legend-bordered {
+    border: 1.5px solid;
+}
+
+.cs-legend-border-top {
+    border: 1.5px solid;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        width: calc(100% + 7px);
+        height: 52%;
+        left: -4px;
+        bottom: -1.8px;
+        border: 5px solid map-get($colors, "background");
+        border-top: none;
+    }
+}
+
+.cs-legend-border-bottom {
+    border: 1.5px solid;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        width: calc(100% + 7px);
+        height: 53%;
+        left: -4px;
+        top: -1.5px;
+        border: 5px solid map-get($colors, "background");
+        border-bottom: none;
+    }
+}

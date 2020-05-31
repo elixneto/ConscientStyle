@@ -16,3 +16,5 @@ $colors: (
 $primary: map-get($colors, "cyan");
 $secondary: map-get($colors, "light-grey");
 $dark: map-get($colors, "dark-grey");
+
+$default-z-index: 9999;

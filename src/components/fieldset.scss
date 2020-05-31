@@ -1,0 +1,17 @@
+@import "../variables";
+
+.cs-fieldset {
+    border: 1.5px solid;
+    border-radius: 3px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+@each $name, $value in $colors {
+    .cs-fieldset-#{$name} {
+        border-color: $value !important;
+    }
+    .cs-fieldset-#{$name} > legend {
+        border-color: $value !important;
+    }
+}
