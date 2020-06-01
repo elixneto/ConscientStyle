@@ -11,5 +11,6 @@ npm i conscientstyle --save
 On your index.html or template page add the link below
 ```html
 <link rel="stylesheet" href="../node_modules/conscientstyle/dist/conscientstyle.min.css" />
+<script src="../dist/js/conscientstyle.min.js"></script>
 ```
 > Correct the link path if necessary
