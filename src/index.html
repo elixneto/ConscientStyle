@@ -6,7 +6,8 @@
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../dist/conscientstyle.min.css">
+    <link rel="stylesheet" href="../dist/css/conscientstyle.min.css">
+    <script src="../dist/js/conscientstyle.min.js"></script>
     <style>
         section>div {
             padding-left: 1.6em;
@@ -14,851 +15,894 @@
     </style>
 </head>
 
-<body class="container">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark cs-bg-dark-grey">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <h1><i class="fa fa-home"></i> index.html</h1>
-    <br />
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 
-    <section>
-        <h2>Buttons</h2>
+    <div class="container">
+        <h1><i class="fa fa-home"></i> index.html</h1>
+        <br />
 
-        <div>
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-success">Success</button>
-            <button class="btn btn-danger">Danger</button>
-            <button class="btn btn-warning">Warning</button>
-            <button class="btn btn-info">Info</button>
-            <button class="btn btn-dark">Dark</button>
-            <button class="btn btn-light">Light</button>
-            <button class="btn btn-link">Link</button>
-        </div>
-        <div class="cs-code">
-            <p>&lt;button class="btn btn-primary">Primary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-secondary">Secondary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-success">Success&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-danger">Danger&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-warning">Warning&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-info">Info&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-dark">Dark&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-light">Light&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-link">Link&lt;/button&gt;</p>
-        </div>
-        <div>
-            <h4>Sizes</h4>
-            <button class="btn btn-sm btn-primary">Primary</button>
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-lg btn-primary">Primary</button>
-        </div>
-        <div class="cs-code">
-            <p>&lt;button class="btn btn-sm btn-primary">Primary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn btn-primary">Primary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-lg btn-primary">Primary&lt;/button&gt;</p>
-        </div>
-        <div>
-            <h4>Outline</h4>
-            <button class="btn btn-outline-primary">Primary</button>
-            <button class="btn btn-outline-secondary">Secondary</button>
-            <button class="btn btn-outline-success">Success</button>
-            <button class="btn btn-outline-danger">Danger</button>
-            <button class="btn btn-outline-warning">Warning</button>
-            <button class="btn btn-outline-info">Info</button>
-            <button class="btn btn-outline-dark">Dark</button>
-            <button class="btn btn-outline-light">Light</button>
-        </div>
-        <div class="cs-code">
-            <p>&lt;button class="btn btn-outline-primary">Primary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-outline-secondary">Secondary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-outline-success">Success&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-outline-danger">Danger&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-outline-warning">Warning&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-outline-info">Info&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-outline-dark">Dark&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-outline-light">Light&lt;/button&gt;</p>
-        </div>
-        <div>
-            <h4>Striped</h4>
-            <button class="btn btn-primary cs-striped">Primary</button>
-            <button class="btn btn-secondary cs-striped">Secondary</button>
-            <button class="btn btn-success cs-striped">Success</button>
-            <button class="btn btn-danger cs-striped">Danger</button>
-            <button class="btn btn-warning cs-striped">Warning</button>
-            <button class="btn btn-info cs-striped">Info</button>
-            <button class="btn btn-dark cs-striped">Dark</button>
-            <button class="btn btn-light cs-striped">Light</button>
-        </div>
-        <div class="cs-code">
-            <p>&lt;button class="btn btn-primary cs-striped">Primary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-secondary cs-striped">Secondary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-success cs-striped">Success&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-danger cs-striped">Danger&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-warning cs-striped">Warning&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-info cs-striped">Info&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-dark cs-striped">Dark&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-light cs-striped">Light&lt;/button&gt;</p>
-        </div>
-        <div>
-            <h4>Disabled</h4>
-            <button class="btn btn-primary" disabled>Primary</button>
-            <button class="btn btn-secondary" disabled>Secondary</button>
-            <button class="btn btn-success" disabled>Success</button>
-            <button class="btn btn-danger" disabled>Danger</button>
-            <button class="btn btn-warning" disabled>Warning</button>
-            <button class="btn btn-info" disabled>Info</button>
-            <button class="btn btn-dark" disabled>Dark</button>
-            <button class="btn btn-light" disabled>Light</button>
-            <button class="btn btn-link" disabled>Link</button>
-        </div>
-        <div class="cs-code">
-            <p>&lt;button class="btn btn-primary" disabled>Primary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-secondary" disabled>Secondary&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-success" disabled>Success&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-danger" disabled>Danger&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-warning" disabled>Warning&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-info" disabled>Info&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-dark" disabled>Dark&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-light" disabled>Light&lt;/button&gt;</p>
-            <p>&lt;button class="btn btn-link" disabled>Link&lt;/button&gt;</p>
-        </div>
+        <section>
+            <h2>Buttons</h2>
 
-    </section>
-    <hr />
+            <div>
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-warning">Warning</button>
+                <button class="btn btn-info">Info</button>
+                <button class="btn btn-dark">Dark</button>
+                <button class="btn btn-light">Light</button>
+                <button class="btn btn-link">Link</button>
+            </div>
+            <div class="cs-code">
+                <p>&lt;button class="btn btn-primary">Primary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-secondary">Secondary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-success">Success&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-danger">Danger&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-warning">Warning&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-info">Info&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-dark">Dark&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-light">Light&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-link">Link&lt;/button&gt;</p>
+            </div>
+            <div>
+                <h4>Sizes</h4>
+                <button class="btn btn-sm btn-primary">Primary</button>
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-lg btn-primary">Primary</button>
+            </div>
+            <div class="cs-code">
+                <p>&lt;button class="btn btn-sm btn-primary">Primary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn btn-primary">Primary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-lg btn-primary">Primary&lt;/button&gt;</p>
+            </div>
+            <div>
+                <h4>Outline</h4>
+                <button class="btn btn-outline-primary">Primary</button>
+                <button class="btn btn-outline-secondary">Secondary</button>
+                <button class="btn btn-outline-success">Success</button>
+                <button class="btn btn-outline-danger">Danger</button>
+                <button class="btn btn-outline-warning">Warning</button>
+                <button class="btn btn-outline-info">Info</button>
+                <button class="btn btn-outline-dark">Dark</button>
+                <button class="btn btn-outline-light">Light</button>
+            </div>
+            <div class="cs-code">
+                <p>&lt;button class="btn btn-outline-primary">Primary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-outline-secondary">Secondary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-outline-success">Success&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-outline-danger">Danger&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-outline-warning">Warning&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-outline-info">Info&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-outline-dark">Dark&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-outline-light">Light&lt;/button&gt;</p>
+            </div>
+            <div>
+                <h4>Striped</h4>
+                <button class="btn btn-primary cs-striped">Primary</button>
+                <button class="btn btn-secondary cs-striped">Secondary</button>
+                <button class="btn btn-success cs-striped">Success</button>
+                <button class="btn btn-danger cs-striped">Danger</button>
+                <button class="btn btn-warning cs-striped">Warning</button>
+                <button class="btn btn-info cs-striped">Info</button>
+                <button class="btn btn-dark cs-striped">Dark</button>
+                <button class="btn btn-light cs-striped">Light</button>
+            </div>
+            <div class="cs-code">
+                <p>&lt;button class="btn btn-primary cs-striped">Primary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-secondary cs-striped">Secondary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-success cs-striped">Success&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-danger cs-striped">Danger&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-warning cs-striped">Warning&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-info cs-striped">Info&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-dark cs-striped">Dark&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-light cs-striped">Light&lt;/button&gt;</p>
+            </div>
+            <div>
+                <h4>Disabled</h4>
+                <button class="btn btn-primary" disabled>Primary</button>
+                <button class="btn btn-secondary" disabled>Secondary</button>
+                <button class="btn btn-success" disabled>Success</button>
+                <button class="btn btn-danger" disabled>Danger</button>
+                <button class="btn btn-warning" disabled>Warning</button>
+                <button class="btn btn-info" disabled>Info</button>
+                <button class="btn btn-dark" disabled>Dark</button>
+                <button class="btn btn-light" disabled>Light</button>
+                <button class="btn btn-link" disabled>Link</button>
+            </div>
+            <div class="cs-code">
+                <p>&lt;button class="btn btn-primary" disabled>Primary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-secondary" disabled>Secondary&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-success" disabled>Success&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-danger" disabled>Danger&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-warning" disabled>Warning&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-info" disabled>Info&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-dark" disabled>Dark&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-light" disabled>Light&lt;/button&gt;</p>
+                <p>&lt;button class="btn btn-link" disabled>Link&lt;/button&gt;</p>
+            </div>
 
-    <section>
-        <h2>Background Colors</h2>
+        </section>
+        <hr />
 
-        <div class="row">
-            <div class="col">
-                <div class="cs-card cs-bg-cyan">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-pink">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-purple">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-violet">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-green">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-yellow">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-orange">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-red">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-grey">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-light-grey">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-dark-grey">
-                    &nbsp;
-                </div>
-            </div>
-        </div>
-        <div class="cs-code">
-            <p>&lt;div class="cs-card cs-bg-cyan"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-pink"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-purple"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-violet"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-green"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-yellow"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-orange"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-red"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-grey"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-light-grey"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-dark-grey"&gt;&lt;/div&gt;</p>
-        </div>
-        <p></p>
-        <div class="row">
-            <div class="col">
-                <div class="cs-card cs-bg-cyan cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-pink cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-purple cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-violet cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-green cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-yellow cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-orange cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-red cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-grey cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-light-grey cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="col">
-                <div class="cs-card cs-bg-dark-grey cs-striped">
-                    &nbsp;
-                </div>
-            </div>
-        </div>
-        <div class="cs-code">
-            <p>&lt;div class="cs-card cs-bg-cyan cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-pink cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-purple cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-violet cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-green cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-yellow cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-orange cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-red cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-grey cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-light-grey cs-striped"&gt;&lt;/div&gt;</p>
-            <p>&lt;div class="cs-card cs-bg-dark-grey cs-striped"&gt;&lt;/div&gt;</p>
-        </div>
-    </section>
-    <hr />
+        <section>
+            <h2>Background Colors</h2>
 
-    <section>
-        <h2>Card Status</h2>
-
-        <div class="row">
-            <div class="col">
-                <div class="cs-card-status">
+            <div class="row">
+                <div class="col">
                     <div class="cs-card cs-bg-cyan">
-                        <b>Title</b>
-                        <hr />
-                        <div class="text-center">
-                            <button class="btn btn-lg btn-outline-primary cs-outline-inverse">
-                                Go <i class="fa fa-chevron-right"></i>
-                            </button>
-                        </div>
+                        &nbsp;
                     </div>
-                    <div class="cs-card text-center">
-                        <h2>325,00
-                            <small>$</small>
-                        </h2>
-                        <p>
-                            May-30-2020
-                        </p>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-pink">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-purple">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-violet">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-green">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-yellow">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-orange">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-red">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-grey">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-light-grey">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-dark-grey">
+                        &nbsp;
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="cs-card-status">
-                    <div class="cs-card cs-bg-cyan">
-                        <i class="fa fa-bar-chart"></i>
-                        <b>Title with icon</b>
-                        <hr />
+            <div class="cs-code">
+                <p>&lt;div class="cs-card cs-bg-cyan"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-pink"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-purple"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-violet"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-green"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-yellow"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-orange"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-red"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-grey"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-light-grey"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-dark-grey"&gt;&lt;/div&gt;</p>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="cs-card cs-bg-cyan cs-striped">
+                        &nbsp;
                     </div>
-                    <div class="cs-card text-center">
-                        <h2>15 <small class="cs-text-green"><i class="fa fa-arrow-up"></i></small></h2>
-                        <span>Requirements</span>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-pink cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-purple cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-violet cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-green cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-yellow cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-orange cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-red cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-grey cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-light-grey cs-striped">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cs-card cs-bg-dark-grey cs-striped">
+                        &nbsp;
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="cs-card-status">
-                    <div class="cs-card cs-bg-cyan">
-                        <br />
-                        <table class="table table-sm table-condensed">
-                            <tbody>
-                                <tr>
-                                    <td>15.6</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>15.6</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>15.6</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="cs-card text-center">
-                        <h2>65
-                            <small>%</small>
-                            <small class="cs-text-red"><i class="fa fa-arrow-down"></i></small></h2>
-                        <span>Avaiability</span>
-                    </div>
-                </div>
+            <div class="cs-code">
+                <p>&lt;div class="cs-card cs-bg-cyan cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-pink cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-purple cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-violet cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-green cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-yellow cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-orange cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-red cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-grey cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-light-grey cs-striped"&gt;&lt;/div&gt;</p>
+                <p>&lt;div class="cs-card cs-bg-dark-grey cs-striped"&gt;&lt;/div&gt;</p>
             </div>
-        </div>
-        <div class="cs-code">
-            <p>&lt;div class="cs-card-status"&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="cs-card cs-bg-cyan"&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;b&gt;Title&lt;/b&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;hr /&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="text-center"&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button class="btn btn-lg
-                btn-outline-primary cs-outline-inverse"&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Go &lt;i
-                class="fa fa-chevron-right"&gt;&lt;/i&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/button&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="cs-card text-center"&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;325,00 &lt;small&gt;$&lt;/small&gt;&lt;/h2&gt;
-            </p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt; May-30-2020 &lt;/p&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</p>
-            <p>&lt;/div&gt;</p>
-        </div>
-        </div>
-    </section>
-    <hr />
+        </section>
+        <hr />
 
-    <section>
-        <h2>Fieldset</h2>
+        <section>
+            <h2>Card Status</h2>
 
-        <div>
-            <fieldset class="cs-fieldset cs-fieldset-cyan">
-                <legend class="cs-legend"><i class="fa fa-home"></i> Login Page</legend>
-                <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col">
-                        <form class="form container">
-                            <div class="form-group">
-                                <label>Username</label>
-                                <input type="email" class="form-control" placeholder="username@mail.com" />
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" placeholder="your password" />
-                            </div>
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn btn-outline-success">
-                                    Sign in
-                                    <i class="fa fa-arrow-right"></i>
+            <div class="row">
+                <div class="col">
+                    <div class="cs-card-status">
+                        <div class="cs-card cs-bg-cyan">
+                            <b>Title</b>
+                            <hr />
+                            <div class="text-center">
+                                <button class="btn btn-lg btn-outline-primary cs-outline-inverse">
+                                    Go <i class="fa fa-chevron-right"></i>
                                 </button>
                             </div>
-                        </form>
+                        </div>
+                        <div class="cs-card text-center">
+                            <h2>325,00
+                                <small>$</small>
+                            </h2>
+                            <p>
+                                May-30-2020
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-1"></div>
-                </div>
-            </fieldset>
-
-            <h4>Borders</h4>
-            <div class="row">
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-no-border">
-                        <legend class="cs-legend">no border</legend>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-outline-danger">
-                                <i class="fa fa-arrow-left"></i>
-                                Logout
-                            </button>
-                        </div>
-                    </fieldset>
                 </div>
                 <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-cyan">
-                        <legend class="cs-legend">no border</legend>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-outline-danger">
-                                <i class="fa fa-arrow-left"></i>
-                                Logout
-                            </button>
+                    <div class="cs-card-status">
+                        <div class="cs-card cs-bg-cyan">
+                            <i class="fa fa-bar-chart"></i>
+                            <b>Title with icon</b>
+                            <hr />
                         </div>
-                    </fieldset>
+                        <div class="cs-card text-center">
+                            <h2>15 <small class="cs-text-green"><i class="fa fa-arrow-up"></i></small></h2>
+                            <span>Requirements</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-cyan">
-                        <legend class="cs-legend cs-legend-bordered">bordered</legend>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-outline-danger">
-                                <i class="fa fa-arrow-left"></i>
-                                Logout
-                            </button>
+                    <div class="cs-card-status">
+                        <div class="cs-card cs-bg-cyan">
+                            <br />
+                            <table class="table table-sm table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <td>15.6</td>
+                                        <td>Lorem ipsum</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>15.6</td>
+                                        <td>Lorem ipsum</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>15.6</td>
+                                        <td>Lorem ipsum</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </fieldset>
-                </div>
-
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-cyan">
-                        <legend class="cs-legend cs-legend-border-top">top</legend>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-outline-danger">
-                                <i class="fa fa-arrow-left"></i>
-                                Logout
-                            </button>
+                        <div class="cs-card text-center">
+                            <h2>65
+                                <small>%</small>
+                                <small class="cs-text-red"><i class="fa fa-arrow-down"></i></small></h2>
+                            <span>Avaiability</span>
                         </div>
-                    </fieldset>
-                </div>
-
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-cyan">
-                        <legend class="cs-legend cs-legend-border-bottom">bottom</legend>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-outline-danger">
-                                <i class="fa fa-arrow-left"></i>
-                                Logout
-                            </button>
-                        </div>
-                    </fieldset>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="cs-code">
+                <p>&lt;div class="cs-card-status"&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="cs-card cs-bg-cyan"&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;b&gt;Title&lt;/b&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;hr /&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="text-center"&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button class="btn btn-lg
+                    btn-outline-primary cs-outline-inverse"&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Go
+                    &lt;i
+                    class="fa fa-chevron-right"&gt;&lt;/i&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/button&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="cs-card text-center"&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;325,00
+                    &lt;small&gt;$&lt;/small&gt;&lt;/h2&gt;
+                </p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt; May-30-2020 &lt;/p&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</p>
+                <p>&lt;/div&gt;</p>
+            </div>
+        </section>
+        <hr />
 
-        <div>
-            <h4>Colors</h4>
-            <div class="row">
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-pink">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-pink">
-                            pink
+        <section>
+            <h2>Fieldset</h2>
+
+            <div>
+                <fieldset class="cs-fieldset cs-fieldset-cyan">
+                    <legend class="cs-legend"><i class="fa fa-home"></i> Login Page</legend>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col">
+                            <form class="form container">
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input type="email" class="form-control" placeholder="username@mail.com" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" placeholder="your password" />
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-outline-success">
+                                        Sign in
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-purple">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-purple">
-                            purple
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-violet">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-violet">
-                            violet
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-green">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-green">
-                            green
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-yellow">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-yellow">
-                            yellow
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-orange">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-orange">
-                            orange
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-red">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-red">
-                            red
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-grey">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-grey">
-                            grey
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-light-grey">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-light-grey cs-text-14">
-                            light grey
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset cs-fieldset-dark-grey">
-                        <legend>x</legend>
-                        <div class="text-center cs-text-dark-grey cs-text-14">
-                            dark grey
-                        </div>
-                    </fieldset>
+                        <div class="col-1"></div>
+                    </div>
+                </fieldset>
+
+                <h4>Borders</h4>
+                <div class="row">
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-no-border">
+                            <legend class="cs-legend">no border</legend>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-danger">
+                                    <i class="fa fa-arrow-left"></i>
+                                    Logout
+                                </button>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-cyan">
+                            <legend class="cs-legend">no border</legend>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-danger">
+                                    <i class="fa fa-arrow-left"></i>
+                                    Logout
+                                </button>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-cyan">
+                            <legend class="cs-legend cs-legend-bordered">bordered</legend>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-danger">
+                                    <i class="fa fa-arrow-left"></i>
+                                    Logout
+                                </button>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-cyan">
+                            <legend class="cs-legend cs-legend-border-top">top</legend>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-danger">
+                                    <i class="fa fa-arrow-left"></i>
+                                    Logout
+                                </button>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-cyan">
+                            <legend class="cs-legend cs-legend-border-bottom">bottom</legend>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-danger">
+                                    <i class="fa fa-arrow-left"></i>
+                                    Logout
+                                </button>
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend class="cs-text-pink">x</legend>
-                        <div class="text-center cs-text-pink">
-                            pink
-                        </div>
-                    </fieldset>
+            <div>
+                <h4>Colors</h4>
+                <div class="row">
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-pink">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-pink">
+                                pink
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-purple">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-purple">
+                                purple
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-violet">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-violet">
+                                violet
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-green">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-green">
+                                green
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-yellow">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-yellow">
+                                yellow
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-orange">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-orange">
+                                orange
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-red">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-red">
+                                red
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-grey">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-grey">
+                                grey
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-light-grey">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-light-grey cs-text-14">
+                                light grey
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset cs-fieldset-dark-grey">
+                            <legend>x</legend>
+                            <div class="text-center cs-text-dark-grey cs-text-14">
+                                dark grey
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend class="cs-text-purple">x</legend>
-                        <div class="text-center cs-text-purple">
-                            purple
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend class="cs-text-violet">x</legend>
-                        <div class="text-center cs-text-violet">
-                            violet
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend  class="cs-text-green">x</legend>
-                        <div class="text-center cs-text-green">
-                            green
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend class="cs-text-yellow">x</legend>
-                        <div class="text-center cs-text-yellow">
-                            yellow
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend class="cs-text-orange">x</legend>
-                        <div class="text-center cs-text-orange">
-                            orange
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend class="cs-text-red">x</legend>
-                        <div class="text-center cs-text-red">
-                            red
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend  class="cs-text-grey">x</legend>
-                        <div class="text-center cs-text-grey">
-                            grey
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend class="cs-text-light-grey">x</legend>
-                        <div class="text-center cs-text-light-grey cs-text-14">
-                            light grey
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset class="cs-fieldset">
-                        <legend class="cs-text-dark-grey">x</legend>
-                        <div class="text-center cs-text-dark-grey cs-text-14">
-                            dark grey
-                        </div>
-                    </fieldset>
+
+                <div class="row">
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-pink">x</legend>
+                            <div class="text-center cs-text-pink">
+                                pink
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-purple">x</legend>
+                            <div class="text-center cs-text-purple">
+                                purple
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-violet">x</legend>
+                            <div class="text-center cs-text-violet">
+                                violet
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-green">x</legend>
+                            <div class="text-center cs-text-green">
+                                green
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-yellow">x</legend>
+                            <div class="text-center cs-text-yellow">
+                                yellow
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-orange">x</legend>
+                            <div class="text-center cs-text-orange">
+                                orange
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-red">x</legend>
+                            <div class="text-center cs-text-red">
+                                red
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-grey">x</legend>
+                            <div class="text-center cs-text-grey">
+                                grey
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-light-grey">x</legend>
+                            <div class="text-center cs-text-light-grey cs-text-14">
+                                light grey
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <fieldset class="cs-fieldset">
+                            <legend class="cs-text-dark-grey">x</legend>
+                            <div class="text-center cs-text-dark-grey cs-text-14">
+                                dark grey
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <hr />
+        </section>
+        <hr />
 
-    <section>
-        <h2>Horizontal Rule</h2>
+        <section>
+            <h2>Horizontal Rule</h2>
 
-        <div>
-            <hr class="cs-hr-cyan" />
-            <hr class="cs-hr-pink" />
-            <hr class="cs-hr-purple" />
-            <hr class="cs-hr-violet" />
-            <hr class="cs-hr-green" />
-            <hr class="cs-hr-yellow" />
-            <hr class="cs-hr-orange" />
-            <hr class="cs-hr-red" />
-            <hr class="cs-hr-grey" />
-            <hr class="cs-hr-light-grey" />
-            <hr class="cs-hr-dark-grey" />
-        </div>
-        <div class="cs-code">
-            <p>&lt;hr class="cs-hr-cyan" /&gt;</p>
-            <p>&lt;hr class="cs-hr-pink" /&gt;</p>
-            <p>&lt;hr class="cs-hr-purple" /&gt;</p>
-            <p>&lt;hr class="cs-hr-violet" /&gt;</p>
-            <p>&lt;hr class="cs-hr-green" /&gt;</p>
-            <p>&lt;hr class="cs-hr-yellow" /&gt;</p>
-            <p>&lt;hr class="cs-hr-orange" /&gt;</p>
-            <p>&lt;hr class="cs-hr-red" /&gt;</p>
-            <p>&lt;hr class="cs-hr-grey" /&gt;</p>
-            <p>&lt;hr class="cs-hr-light-grey" /&gt;</p>
-            <p>&lt;hr class="cs-hr-dark-grey" /&gt;</p>
-        </div>
-    </section>
-    <hr />
+            <div>
+                <hr class="cs-hr-cyan" />
+                <hr class="cs-hr-pink" />
+                <hr class="cs-hr-purple" />
+                <hr class="cs-hr-violet" />
+                <hr class="cs-hr-green" />
+                <hr class="cs-hr-yellow" />
+                <hr class="cs-hr-orange" />
+                <hr class="cs-hr-red" />
+                <hr class="cs-hr-grey" />
+                <hr class="cs-hr-light-grey" />
+                <hr class="cs-hr-dark-grey" />
+            </div>
+            <div class="cs-code">
+                <p>&lt;hr class="cs-hr-cyan" /&gt;</p>
+                <p>&lt;hr class="cs-hr-pink" /&gt;</p>
+                <p>&lt;hr class="cs-hr-purple" /&gt;</p>
+                <p>&lt;hr class="cs-hr-violet" /&gt;</p>
+                <p>&lt;hr class="cs-hr-green" /&gt;</p>
+                <p>&lt;hr class="cs-hr-yellow" /&gt;</p>
+                <p>&lt;hr class="cs-hr-orange" /&gt;</p>
+                <p>&lt;hr class="cs-hr-red" /&gt;</p>
+                <p>&lt;hr class="cs-hr-grey" /&gt;</p>
+                <p>&lt;hr class="cs-hr-light-grey" /&gt;</p>
+                <p>&lt;hr class="cs-hr-dark-grey" /&gt;</p>
+            </div>
+        </section>
+        <hr />
 
-    <section>
-        <h2>Tables</h2>
+        <section>
+            <h2>Tables</h2>
 
-        <div>
-            <table class="table table-sm table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>Head</th>
-                        <th>Body</th>
-                        <th>%</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <table class="table table-sm table-hover">
-                <thead>
-                    <tr>
-                        <th>
-                            <i class="fa fa-home"></i>
-                            Head
-                        </th>
-                        <th>Body</th>
-                        <th>%</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr class="cs-bg-green">
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr class="cs-bg-red cs-striped">
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                    <tr>
-                        <td>Notre Dame</td>
-                        <td>Drum & Bass</td>
-                        <td>12.56</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <hr />
+            <div>
+                <table class="table table-sm table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Head</th>
+                            <th>Body</th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="fa fa-home"></i>
+                                Head
+                            </th>
+                            <th>Body</th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr class="cs-bg-green">
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr class="cs-bg-red cs-striped">
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                        <tr>
+                            <td>Notre Dame</td>
+                            <td>Drum & Bass</td>
+                            <td>12.56</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <hr />
 
-    <section>
-        <h2>
-            Text
-        </h2>
+        <section>
+            <h2>
+                Text
+            </h2>
 
-        <div>
-            <h4>Sizes</h4>
-            <span class="cs-text-72">72px</span>
-            <span class="cs-text-60">60px</span>
-            <span class="cs-text-50">50px</span>
-            <span class="cs-text-42">42px</span>
-            <span class="cs-text-36">36px</span>
-            <span class="cs-text-30">30px</span>
-            <span class="cs-text-26">26px</span>
-            <span class="cs-text-24">24px</span>
-            <span class="cs-text-22">22px</span>
-            <span class="cs-text-20">20px</span>
-            <span class="cs-text-18">18px</span>
-            <span class="cs-text-16">16px</span>
-            <span class="cs-text-14">14px</span>
-            <span class="cs-text-12">12px</span>
-            <span class="cs-text-10">10px</span>
-        </div>
-        <div class="cs-code">
-            <p>&lt;span class="cs-text-72">72px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-60">60px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-50">50px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-42">42px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-36">36px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-30">30px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-26">26px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-24">24px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-22">22px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-20">20px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-18">18px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-16">16px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-14">14px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-12">12px&lt;/span&gt;</p>
-            <p>&lt;span class="cs-text-10">10px&lt;/span&gt;</p>
-        </div>
+            <div>
+                <h4>Sizes</h4>
+                <span class="cs-text-72">72px</span>
+                <span class="cs-text-60">60px</span>
+                <span class="cs-text-50">50px</span>
+                <span class="cs-text-42">42px</span>
+                <span class="cs-text-36">36px</span>
+                <span class="cs-text-30">30px</span>
+                <span class="cs-text-26">26px</span>
+                <span class="cs-text-24">24px</span>
+                <span class="cs-text-22">22px</span>
+                <span class="cs-text-20">20px</span>
+                <span class="cs-text-18">18px</span>
+                <span class="cs-text-16">16px</span>
+                <span class="cs-text-14">14px</span>
+                <span class="cs-text-12">12px</span>
+                <span class="cs-text-10">10px</span>
+            </div>
+            <div class="cs-code">
+                <p>&lt;span class="cs-text-72">72px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-60">60px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-50">50px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-42">42px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-36">36px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-30">30px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-26">26px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-24">24px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-22">22px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-20">20px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-18">18px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-16">16px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-14">14px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-12">12px&lt;/span&gt;</p>
+                <p>&lt;span class="cs-text-10">10px&lt;/span&gt;</p>
+            </div>
 
-        <div>
-            <h4>Colors</h4>
-            <p class="cs-text-26">
-                <span class="cs-text-cyan">cyan</span>,
-                <span class="cs-text-pink">pink</span>,
-                <span class="cs-text-purple">purple</span>,
-                <span class="cs-text-violet">violet</span>,
-                <span class="cs-text-green">green</span>,
-                <span class="cs-text-yellow">yellow</span>,
-                <span class="cs-text-orange">orange</span>,
-                <span class="cs-text-red">red</span>,
-                <span class="cs-text-grey">grey</span> and
-                <span class="cs-text-light-grey">light grey</span>
-            </p>
-        </div>
-        <div class="cs-code">
-            <p>&lt;span class="cs-text-cyan"&gt;cyan&lt;/span&gt;,</p>
-            <p>&lt;span class="cs-text-pink"&gt;pink&lt;/span&gt;,</p>
-            <p>&lt;span class="cs-text-purple"&gt;purple&lt;/span&gt;,</p>
-            <p>&lt;span class="cs-text-violet"&gt;violet&lt;/span&gt;,</p>
-            <p>&lt;span class="cs-text-green"&gt;green&lt;/span&gt;,</p>
-            <p>&lt;span class="cs-text-yellow"&gt;yellow&lt;/span&gt;,</p>
-            <p>&lt;span class="cs-text-orange"&gt;orange&lt;/span&gt;,</p>
-            <p>&lt;span class="cs-text-red"&gt;red&lt;/span&gt;,</p>
-            <p>&lt;span class="cs-text-grey"&gt;grey&lt;/span&gt; and</p>
-            <p>&lt;span class="cs-text-light-grey"&gt;light grey&lt;/span&gt;</p>
-        </div>
-        <div>
-            <p></p>
-            <h4>Rainbow</h4>
+            <div>
+                <h4>Colors</h4>
+                <p class="cs-text-26">
+                    <span class="cs-text-cyan">cyan</span>,
+                    <span class="cs-text-pink">pink</span>,
+                    <span class="cs-text-purple">purple</span>,
+                    <span class="cs-text-violet">violet</span>,
+                    <span class="cs-text-green">green</span>,
+                    <span class="cs-text-yellow">yellow</span>,
+                    <span class="cs-text-orange">orange</span>,
+                    <span class="cs-text-red">red</span>,
+                    <span class="cs-text-grey">grey</span> and
+                    <span class="cs-text-light-grey">light grey</span>
+                </p>
+            </div>
+            <div class="cs-code">
+                <p>&lt;span class="cs-text-cyan"&gt;cyan&lt;/span&gt;,</p>
+                <p>&lt;span class="cs-text-pink"&gt;pink&lt;/span&gt;,</p>
+                <p>&lt;span class="cs-text-purple"&gt;purple&lt;/span&gt;,</p>
+                <p>&lt;span class="cs-text-violet"&gt;violet&lt;/span&gt;,</p>
+                <p>&lt;span class="cs-text-green"&gt;green&lt;/span&gt;,</p>
+                <p>&lt;span class="cs-text-yellow"&gt;yellow&lt;/span&gt;,</p>
+                <p>&lt;span class="cs-text-orange"&gt;orange&lt;/span&gt;,</p>
+                <p>&lt;span class="cs-text-red"&gt;red&lt;/span&gt;,</p>
+                <p>&lt;span class="cs-text-grey"&gt;grey&lt;/span&gt; and</p>
+                <p>&lt;span class="cs-text-light-grey"&gt;light grey&lt;/span&gt;</p>
+            </div>
+            <div>
+                <p></p>
+                <h4>Rainbow</h4>
 
-            <p class="cs-text-rainbow">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis repudiandae exercitationem at
-                doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis, vel ab odit
-                deserunt laborum veniam nostrum libero! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Veritatis repudiandae exercitationem at
-                doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis, vel ab odit
-                deserunt laborum veniam nostrum libero! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Veritatis repudiandae exercitationem at
-                doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis, vel ab odit
-                deserunt laborum veniam nostrum libero! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Veritatis repudiandae exercitationem at
-                doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis, vel ab odit
-                deserunt laborum veniam nostrum libero!
-            </p>
-        </div>
-        <div class="cs-code">
-            <p>&lt;p class="cs-text-rainbow"&gt;</p>
-            <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis repudiandae
-                exercitationem at doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis,
-                vel ab odit deserunt laborum veniam nostrum libero!
-            </p>
-            <p>&lt;/p&gt;</p>
-        </div>
-    </section>
+                <p class="cs-text-rainbow">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis repudiandae exercitationem at
+                    doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis, vel ab odit
+                    deserunt laborum veniam nostrum libero! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Veritatis repudiandae exercitationem at
+                    doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis, vel ab odit
+                    deserunt laborum veniam nostrum libero! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Veritatis repudiandae exercitationem at
+                    doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis, vel ab odit
+                    deserunt laborum veniam nostrum libero! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Veritatis repudiandae exercitationem at
+                    doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus corporis, vel ab odit
+                    deserunt laborum veniam nostrum libero!
+                </p>
+            </div>
+            <div class="cs-code">
+                <p>&lt;p class="cs-text-rainbow"&gt;</p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
+                    repudiandae
+                    exercitationem at doloremque architecto tempore numquam nisi iusto dolore voluptatem doloribus
+                    corporis,
+                    vel ab odit deserunt laborum veniam nostrum libero!
+                </p>
+                <p>&lt;/p&gt;</p>
+            </div>
+        </section>
+    </div>
+
 </body>
 
 </html>

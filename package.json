@@ -1,6 +1,6 @@
 {
     "name": "conscientstyle",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "",
     "scripts": {
         "build": "gulp build"
@@ -12,7 +12,9 @@
     "author": "Élix Neto <elixneto@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "bootstrap": "4.5.0"
+        "bootstrap": "4.5.0",
+        "jquery": "3.5.1",
+        "popper.js": "1.16.1"
     },
     "devDependencies": {
         "browser-sync": "2.26.7",
