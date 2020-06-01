@@ -1,2 +1,2 @@
 # ConscientStyle
-Sass components for a dark theme using bootstrap4
+Dark theme & UI components using Bootstrap 4
