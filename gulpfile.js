@@ -26,7 +26,7 @@ gulp.task('js', function () {
 
 gulp.task('fonts', function () {
     return gulp.src('./src/fonts/*.ttf')
-        .pipe(gulp.dest('dist/css/'))
+        .pipe(gulp.dest('dist/css/fonts/'))
         .pipe(browserSync.stream());
 });
 
