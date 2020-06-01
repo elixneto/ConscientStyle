@@ -5,7 +5,11 @@
     "scripts": {
         "build": "gulp build"
     },
-    "author": "Élix Neto",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/elixneto/ConscientStyle.git"
+    },
+    "author": "Élix Neto <elixneto@gmail.com>",
     "license": "MIT",
     "dependencies": {
         "bootstrap": "4.5.0"
