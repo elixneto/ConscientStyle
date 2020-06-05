@@ -1,0 +1,12 @@
+@import "../variables";
+
+@each $name, $value in $colors {
+    .cs-badge-#{$name}{
+        padding-right: 4px;
+        padding-left: 4px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        background-color: $value;
+        border-radius: 5px;
+    }   
+}
