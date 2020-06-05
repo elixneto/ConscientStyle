@@ -9,3 +9,53 @@
         color: $primary !important;
     }
 }
+
+.cs-outline-inverse.btn-outline-secondary {
+    border-color: white !important;
+    color: white !important;
+
+    &:hover {
+        background-color: white !important;
+        color: $secondary !important;
+    }
+}
+
+.cs-outline-inverse.btn-outline-success {
+    border-color: white !important;
+    color: white !important;
+
+    &:hover {
+        background-color: white !important;
+        color: map-get($colors, "green") !important;
+    }
+}
+
+.cs-outline-inverse.btn-outline-warning {
+    border-color: white !important;
+    color: white !important;
+
+    &:hover {
+        background-color: white !important;
+        color: map-get($colors, "yellow") !important;
+    }
+}
+
+.cs-outline-inverse.btn-outline-danger {
+    border-color: white !important;
+    color: white !important;
+
+    &:hover {
+        background-color: white !important;
+        color: map-get($colors, "red") !important;
+    }
+}
+
+.cs-outline-inverse.btn-outline-info {
+    border-color: white !important;
+    color: white !important;
+
+    &:hover {
+        background-color: white !important;
+        color: map-get($colors, "pink") !important;
+    }
+}
