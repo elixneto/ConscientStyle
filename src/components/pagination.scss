@@ -1,0 +1,50 @@
+@import "../variables";
+
+ul.cs-pagination {
+    list-style-type: none;
+}
+
+ul.cs-pagination > li {
+    float: left;
+}
+
+ul.cs-pagination > li a {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 3px;
+    text-decoration: none;
+    border: solid 1px map-get($colors, "light-grey");
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+
+    &:hover {
+        background-color: lighten(map-get($colors, "light-grey"), 22.5%);
+    }
+}
+ul.cs-pagination > li a.active {
+    color: map-get($colors, "light-background");
+    border-color: $primary;
+    background-color: $primary;
+}
+
+ul.cs-pagination > li a i {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@each $name, $value in $colors {
+    ul.cs-pagination-#{$name} > li a {
+        color: $value;
+    }
+    ul.cs-pagination-#{$name} > li a.active {
+        color: map-get($colors, "light-background");
+        border-color: $value;
+        background-color: $value;
+    }
+}
