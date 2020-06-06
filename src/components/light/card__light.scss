@@ -1,0 +1,78 @@
+@import "../../variables";
+
+.cs-card {
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    display: flexbox;
+    align-items: center;
+    border: solid 1.2px map-get($colors, "dark-background");
+}
+.cs-card-header {
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -6px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.cs-card-header > .right {
+    margin-left: auto;
+    margin-right: 0;
+}
+.cs-card-header.no-bg {
+    background-color: transparent !important;
+}
+
+@each $name, $value in $colors {
+    .cs-card-#{$name} {
+        border-color: $value;
+    }
+    .cs-card-#{$name} > .cs-card-header {
+        background-color: $value;
+    }
+}
+
+/* CARD STATUS */
+.cs-card-status {
+    position: relative;
+    height: 180px;
+}
+
+/***** Back */
+.cs-card-status > .cs-card:nth-child(1) {
+    position: absolute;
+    width: -webkit-fill-available;
+    margin-right: 10px;
+    z-index: #{$default-z-index + 1};
+    border: none;
+
+    height: 138px;
+
+    &:hover {
+        z-index: #{$default-z-index + 2};
+    }
+}
+
+/***** Front */
+.cs-card-status > .cs-card:nth-child(2) {
+    position: absolute;
+    background-color: map-get($colors, "dark-background");
+    color: map-get($colors, "light-background");
+    padding-top: 18px;
+    width: -webkit-fill-available;
+    margin-top: 30px;
+    margin-left: 8px;
+    z-index: #{$default-z-index + 1};
+    border: none;
+
+    height: 120px;
+
+    &:hover {
+        z-index: $default-z-index;
+    }
+}

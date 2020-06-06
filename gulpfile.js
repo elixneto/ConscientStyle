@@ -4,10 +4,25 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const minifyCss = require('gulp-minify-css');
 
-gulp.task('sass', function () {
-    return gulp.src('./src/**/*.scss')
+gulp.task('sass-dark', function () {
+    return gulp.src([
+        './src/dark-global.scss',
+        './src/components/dark/*.scss',
+        './src/components/*.scss'])
         .pipe(sass().on('error', sass.logError))
-        .pipe(concat("conscientstyle.min.css"))
+        .pipe(concat("conscientstyle-dark.min.css"))
+        .pipe(minifyCss())
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('sass-light', function () {
+    return gulp.src([
+        './src/light-global.scss',
+        './src/components/light/*.scss',
+        './src/components/*.scss'])
+        .pipe(sass().on('error', sass.logError))
+        .pipe(concat("conscientstyle-light.min.css"))
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/css/'))
         .pipe(browserSync.stream());
@@ -40,4 +55,4 @@ gulp.task('mappings', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build', gulp.parallel('sass', 'js', 'fonts', 'mappings'));
+gulp.task('build', gulp.parallel('sass-dark', 'sass-light', 'js', 'fonts', 'mappings'));

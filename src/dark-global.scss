@@ -33,7 +33,7 @@ $theme-colors: (
 
 html {
     font-family: "Montserrat Light" !important;
-    background-color: map-get($colors, "background") !important;
+    background-color: map-get($colors, "dark-background") !important;
     color: white !important;
     font-size: 16px;
 }
